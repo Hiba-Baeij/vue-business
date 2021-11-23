@@ -1,0 +1,38 @@
+$mainPerple: #896eff;
+$mainBlue: #505489;
+$secondaryBlue: #1f2471;
+$blackBlue: #262f4b;
+$mainGray: rgba(137, 110, 255, 0.1);
+$marginTop: 60px;
+
+h4 {
+  background-color: $mainGray;
+  width: 110px;
+  border-radius: 10px;
+  text-align: center;
+  color: $mainPerple;
+  padding: 10px;
+  font-size: 18px !important;
+}
+h2 {
+  color: $secondaryBlue;
+  font-weight: 700 !important;
+}
+p {
+  color: $mainBlue;
+  line-height: 1.5;
+}
+a {
+  color: $mainPerple !important;
+  font-size: 18px;
+}
+
+$theme-colors: (
+  "main": $mainPerple,
+  "second": $secondaryBlue,
+  "custom-dark": $mainBlue,
+  "gray": $mainGray,
+  "black-blue": $blackBlue,
+);
+
+@import "bootstrap/scss/bootstrap";
