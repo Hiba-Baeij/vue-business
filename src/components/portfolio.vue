@@ -51,7 +51,13 @@
       </div>
       <div class="portfolio-img">
         <b-row>
-          <b-col lg="4" v-for="prop in filter" :key="prop.id" class="mt-4">
+          <b-col
+            lg="4"
+            md="6"
+            v-for="prop in filter"
+            :key="prop.id"
+            class="mt-4"
+          >
             <img :src="prop.img" alt="" />
           </b-col>
         </b-row>
@@ -80,63 +86,58 @@ export default {
   }
   h2 {
     margin: 30px;
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
   }
 
   ul {
+    min-width: 100%;
     margin: 0 !important;
-
     padding: 8px !important;
-  }
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 25px;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 5px 20px 5px 20px !important;
     }
-    ul#filter {
-      background: none !important;
-      display: inline-block !important;
-    }
-    ul li {
-      margin: 0;
-    }
-    ul li button {
-      font-size: 15px !important;
-      display: grid;
-      grid-template-rows: repeat(20px 20px 20px);
-    }
-    ul li button.btn.one {
-      padding: 8px 20px 8px 20px !important;
-    }
-  }
+    li {
+      list-style: none;
 
-  ul li {
-    list-style: none;
-    width: 100%;
-  }
-  ul li button.btn.one {
-    background: $mainPerple !important;
-    box-shadow: 0 0.5rem 2rem 0.5rem #896eff71;
-    border: none;
-    border-radius: 30px;
-    padding: 10px 30px 10px 30px;
-    font-size: 20px;
-    color: white;
-  }
-  ul li button {
-    color: $secondaryBlue;
-    background: none !important;
-    font-size: 18px;
-    font-weight: 30px;
-    border: none;
-  }
-  ul li button:hover {
-    color: $mainPerple;
-  }
-  img {
-    width: 100% !important;
-    height: 100% !important;
+      button.btn.one {
+        background: $mainPerple !important;
+        box-shadow: 0 0.5rem 2rem 0.5rem #896eff71;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 30px 10px 30px;
+        font-size: 20px;
+        color: white;
+        @media (max-width: 768px) {
+          font-size: 15px;
+          padding: 10px 20px 10px 20px;
+        }
+      }
+      button {
+        color: $secondaryBlue;
+        background: none !important;
+        font-size: 18px;
+        font-weight: 30px;
+        border: none;
+        &:hover {
+          color: $mainPerple;
+        }
+        @media (max-width: 768px) {
+          font-size: 15px !important;
+        }
+      }
+    }
   }
   .portfolio-img {
     margin: 30px;
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 }
 </style>

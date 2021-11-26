@@ -1,7 +1,7 @@
 <template>
   <div class="testmonial">
     <b-row>
-      <b-col lg="10">
+      <b-col lg="10" order="1" order-md="2">
         <VueSlickCarousel v-bind="settings" :arrows="true" :dots="true">
           <div class="background">
             <p>
@@ -102,9 +102,20 @@
         </VueSlickCarousel>
       </b-col>
       <b-col lg="2">
-        <div class="text-testmonial">
-          <h4>Testmonial</h4>
-          <h2>See What Are They Say About Us</h2>
+        <div
+          order="2"
+          order-md="1"
+          class="
+            text-testmonial text-center text-md-left
+            d-md-flex
+            flex-column
+            align-items-center
+          "
+        >
+          <div>
+            <h4 class="mb-4 m-md-auto">Testmonial</h4>
+            <h2>See What Are They Say About Us</h2>
+          </div>
           <p>
             Fusce vitae sapien eu mauris semper faucibus eget tristique lorem
           </p>
@@ -133,13 +144,24 @@ export default {
       },
     };
   },
+  methods: {
+    // changeElecarousel() {
+    //   console.log(window.innerWidth);
+    //   if (window.innerWidth <= 768) {
+    //     this.settings.slidesToShow = 1;
+    //   } else this.settings.slidesToShow = 3;
+    // },
+  },
+  // mounted() {
+  //   window.addEventListener("resize", this.changeElecarousel);
+  // },
 };
 </script>
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
 .testmonial {
-  padding: 80px 60px 80px 60px;
+  padding: 70px 60px 70px 60px;
   background-color: #896eff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23595462' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   .background {
@@ -147,6 +169,10 @@ export default {
     width: 350px !important;
     border-radius: 10px;
     padding: 15px;
+    @media (max-width: 768px) {
+      width: 200px !important;
+      margin-left: 10px !important;
+    }
   }
   h3 {
     color: $secondaryBlue;
@@ -154,7 +180,6 @@ export default {
     font-size: 22px;
   }
   .text-testmonial {
-    width: 238px !important;
     h4,
     h2,
     p {

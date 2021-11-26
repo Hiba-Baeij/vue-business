@@ -78,14 +78,14 @@
 <script>
 import About from "../views/About.vue";
 import contact from "../components/contact.vue";
-import testmonial from "../components/testmonial.vue";
+import Testmonial from "../components/Testmonial.vue";
 import team from "../components/team.vue";
 import AnotherSection from "../components/AnotherSection.vue";
 export default {
   components: {
     About,
     contact,
-    testmonial,
+    Testmonial,
     team,
     AnotherSection,
   },

@@ -3,24 +3,24 @@
     <b-container>
       <b-row>
         <b-col lg="6">
-          <h4>contactUs</h4>
+          <h4>contact us</h4>
           <h2>We Love To Help Great Companies To Enlarge Their Revenues.</h2>
           <div class="form">
             <form action="">
               <b-row>
-                <b-col lg="6">
+                <b-col lg="6" md="6">
                   <div class="icon-input">
                     <span class="mdi mdi-account"> |</span>
                   </div>
                   <input type="text" class="shadow" placeholder="First Name" />
                 </b-col>
-                <b-col lg="6">
+                <b-col lg="6" md="6">
                   <div class="icon-input">
                     <span class="mdi mdi-account"> |</span>
                   </div>
                   <input type="text" class="shadow" placeholder="Last Name" />
                 </b-col>
-                <b-col lg="6">
+                <b-col lg="6" md="6">
                   <div class="icon-input">
                     <span class="mdi mdi-email"> |</span>
                   </div>
@@ -30,13 +30,13 @@
                     placeholder="Email Address"
                   />
                 </b-col>
-                <b-col lg="6">
+                <b-col lg="6" md="6">
                   <div class="icon-input">
                     <span class="mdi mdi-phone"> |</span>
                   </div>
                   <input type="text" class="shadow" placeholder="Phone No" />
                 </b-col>
-                <b-col lg="6">
+                <b-col lg="6" md="6">
                   <div class="icon-input">
                     <span class="mdi mdi-format-page-break"> |</span>
                   </div>
@@ -46,7 +46,7 @@
                     placeholder="Project Title"
                   />
                 </b-col>
-                <b-col lg="6">
+                <b-col lg="6" md="6">
                   <div class="icon-input">
                     <span class="mdi mdi-message-reply-text-outline"> |</span>
                   </div>
@@ -74,8 +74,12 @@
             </button>
           </div>
         </b-col>
-        <b-col lg="6">
-          <img src="" alt="" />
+        <b-col lg="6" class="w-100 d-flex justify-content-center align-items">
+          <img
+            class="w-100"
+            src="../assets/undraw_Address_re_yaoj.png"
+            alt=""
+          />
         </b-col>
       </b-row>
     </b-container>
@@ -131,6 +135,9 @@
     padding: 10px;
     border-radius: 30px;
     color: white;
+  }
+  img {
+    object-fit: cover;
   }
 }
 </style>

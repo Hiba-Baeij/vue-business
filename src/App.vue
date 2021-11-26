@@ -18,7 +18,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  font-family: Source Sans Pro, sans-serif;
+  font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

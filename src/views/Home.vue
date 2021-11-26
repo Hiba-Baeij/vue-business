@@ -3,12 +3,18 @@
     <!-- start header -->
     <div class="header bg-light">
       <b-container>
-        <b-row>
+        <b-row class="no-gutters">
           <b-col
-            lg="6"
-            class="d-flex justify-content-center align-items-center"
+            cols="12"
+            md="6"
+            class="
+              text-center text-md-left
+              d-flex
+              justify-content-center
+              align-items-center
+            "
           >
-            <div class="text">
+            <div class="text text-center text-md-left">
               <p class="head">WE CREATE IDEAS</p>
               <h2>
                 Build Stunning <span>Website </span><br />
@@ -26,8 +32,17 @@
               >
             </div>
           </b-col>
-          <b-col lg="6">
-            <div class="svg">
+          <b-col
+            cols="12"
+            md="6"
+            class="
+              svg
+              d-none d-md-block d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="vector "
@@ -459,8 +474,8 @@
         <h4 class="text-center m-auto">Services</h4>
         <h2 class="text-center m-2">Provide Awesome Service To You</h2>
         <b-row>
-          <b-col lg="4" v-for="item in cardProp" :key="item.id">
-            <card :card="item"></card>
+          <b-col lg="4" md="6" v-for="item in cardProp" :key="item.id">
+            <services :card="item"></services>
           </b-col>
         </b-row>
       </section>
@@ -479,8 +494,10 @@
       <b-container>
         <b-row>
           <b-col lg="7">
-            <h4>Feature</h4>
-            <h2>How We Can Help You Achieve Your Business Goal</h2>
+            <div class="text-center text-md-left">
+              <h4 class="m-auto m-md-0">Feature</h4>
+              <h2>How We Can Help You Achieve Your Business Goal</h2>
+            </div>
             <b-row class="circle">
               <b-col
                 lg="3"
@@ -499,7 +516,7 @@
                 </div>
               </b-col>
               <b-col lg="9" sm="9">
-                <div class="text-feature">
+                <div class="text-feature text-center text-md-left mt-2 mt-md-0">
                   <h3>Testing & Lunching</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -527,7 +544,7 @@
                 </div>
               </b-col>
               <b-col lg="9" sm="9">
-                <div class="text-feature">
+                <div class="text-feature text-center text-md-left mt-2 mt-md-0">
                   <h3>Designing & Developing</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -540,6 +557,7 @@
             <b-row class="circle">
               <b-col
                 lg="3"
+                sm="3"
                 class="circle d-flex justify-content-center align-items-center"
               >
                 <div
@@ -553,8 +571,8 @@
                   <span class="mdi mdi-rocket-outline"></span>
                 </div>
               </b-col>
-              <b-col lg="9">
-                <div class="text-feature">
+              <b-col lg="9" sm="9">
+                <div class="text-feature text-center text-md-left mt-2 mt-md-0">
                   <h3>Idea & Analysis Gathering</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -570,8 +588,7 @@
               xmlns="http://www.w3.org/2000/svg"
               id="ba230943-1bdb-4bd0-9561-c7824586c7f7"
               data-name="Layer 1"
-              width="1019.4842"
-              height="436.68123"
+              class="w-lg-100 w-md-50 m-auto my-md-4"
               viewBox="0 0 1019.4842 436.68123"
             >
               <path
@@ -766,7 +783,6 @@
     <!-- end feture -->
     <!-- start portfolio -->
     <portfolio></portfolio>
-
     <!-- end portfolio -->
     <!-- start news -->
     <news></news>
@@ -787,32 +803,38 @@
 </template>
 
 <script>
-import card from "../components/card.vue";
+import Services from "../components/Services.vue";
 import About from "../views/About.vue";
-import portfolio from "../components/portfolio.vue";
+import Portfolio from "../components/Portfolio.vue";
 import News from "../components/News.vue";
 import team from "../components/team.vue";
-import pricing from "../components/pricing.vue";
-import testmonial from "../components/testmonial.vue";
+import Pricing from "../components/Pricing.vue";
+import Testmonial from "../components/Testmonial.vue";
 import contact from "../components/contact.vue";
 import AnotherSection from "../components/AnotherSection.vue";
+let aos = require("../assets/aos");
+import "../assets/aos/src/sass/aos.scss";
+import "../assets/aos/dist/aos.css";
 
 import { mapState } from "vuex";
 
 export default {
   components: {
-    card,
+    Services,
     About,
-    portfolio,
+    Portfolio,
     News,
     team,
-    pricing,
-    testmonial,
+    Pricing,
+    Testmonial,
     contact,
     AnotherSection,
   },
   computed: {
     ...mapState(["cardProp"]),
+  },
+  created() {
+    aos.init();
   },
 };
 </script>
@@ -821,18 +843,16 @@ export default {
 @import "../assets/scss/variables.scss";
 // start header
 @media (max-width: 768px) {
-  h2.text-center {
-    font-size: 25px !important;
-  }
   h2 {
     font-size: 25px !important;
+    .text-center {
+      font-size: 25px !important;
+    }
   }
 }
 svg {
   width: 100% !important;
-}
-@media (max-width: 768px) {
-  svg {
+  @media (max-width: 768px) {
     display: none !important;
   }
 }
@@ -843,20 +863,16 @@ svg {
     font-size: 20px;
     margin-top: 10px;
   }
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 35px !important;
-    }
-    svg {
-      display: none !important;
-    }
-  }
+
   h2 {
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
     color: $blackBlue;
     margin-top: 20px;
     line-height: 1.3;
+    span {
+      color: $mainPerple;
+    }
   }
 
   span.share {
@@ -866,16 +882,18 @@ svg {
     border-radius: 30px;
     margin-right: 10px;
   }
-  h2 span {
-    color: $mainPerple;
-  }
+
   p {
     margin-top: 20px;
     color: $mainBlue;
   }
   a {
     @extend a;
-    margin-top: 50px;
+    border: none !important;
+    margin-top: 20px;
+    @media (max-width: 768px) {
+      margin: 10px;
+    }
   }
 }
 

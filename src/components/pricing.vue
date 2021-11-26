@@ -4,7 +4,7 @@
       <h4 class="m-auto">pricing</h4>
       <h2>CHOOSE PLAN</h2>
       <b-row>
-        <b-col lg="4">
+        <b-col lg="4" md="6" class="mt-md-4 mt-4">
           <div @mousenter="setClass()" class="background shadow">
             <h3 class="title">Basic Plan</h3>
             <h3>$99/Month</h3>
@@ -20,7 +20,7 @@
             <b-button to="/p1">Start Now</b-button>
           </div>
         </b-col>
-        <b-col lg="4">
+        <b-col lg="4" md="6" class="mt-md-4 mt-4">
           <div @mousenter="setClass()" class="background shadow">
             <h3 class="title">Basic Plan</h3>
             <h3>$99/Month</h3>
@@ -36,7 +36,7 @@
             <b-button to="/p2">Start Now</b-button>
           </div>
         </b-col>
-        <b-col lg="4">
+        <b-col lg="4" md="6" class="mt-md-4 mt-4">
           <div @mousenter="setClass()" class="background shadow">
             <h3 class="title">Basic Plan</h3>
             <h3>$99/Month</h3>
@@ -73,9 +73,7 @@ export default {
     background: #ffff;
     padding: 30px;
     border-radius: 15px;
-    @media (max-width: 768px) {
-      margin-top: 20px;
-    }
+
     &:hover {
       animation: jump 0.8s ease;
       background: rgb(36, 0, 21);
@@ -94,7 +92,6 @@ export default {
       }
       @media (max-width: 768px) {
         animation: none !important;
-        margin-top: 10px;
       }
     }
 
@@ -118,18 +115,20 @@ export default {
   h3 {
     color: $mainPerple;
     font-weight: bold;
+    .title {
+      color: $secondaryBlue;
+      font-weight: bold;
+    }
   }
-  h3.title {
-    color: $secondaryBlue;
-    font-weight: bold;
-  }
+
   ul {
     padding: 0 !important;
+    li {
+      list-style: none;
+      color: $mainPerple;
+    }
   }
-  ul li {
-    list-style: none;
-    color: $mainPerple;
-  }
+
   .btn {
     background: rgb(36, 0, 21);
     background: linear-gradient(

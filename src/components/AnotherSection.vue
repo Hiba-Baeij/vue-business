@@ -2,7 +2,7 @@
   <div class="content-inner text-center">
     <b-container class="mt-2">
       <b-row>
-        <b-col lg="3">
+        <b-col lg="3" md="6">
           <div class="card border-0">
             <div
               class="
@@ -19,7 +19,7 @@
             <h3 class="number">2345</h3>
           </div>
         </b-col>
-        <b-col lg="3" class="mt-4">
+        <b-col lg="3" md="6" class="mt-lg-4 mt-4 mt-md-0">
           <div class="card border-0">
             <div
               class="
@@ -36,7 +36,7 @@
             <h3 class="number">2345</h3>
           </div>
         </b-col>
-        <b-col lg="3" class="mt">
+        <b-col lg="3" md="6" class="mt-4 mt-md-4 mt-lg-0">
           <div class="card border-0">
             <div
               class="
@@ -53,7 +53,7 @@
             <h3 class="number">2345</h3>
           </div>
         </b-col>
-        <b-col lg="3" class="mt-4">
+        <b-col lg="3" md="6" class="mt-4">
           <div class="card border-0">
             <div
               class="
@@ -90,11 +90,11 @@ export default {};
   justify-content: center;
   align-items: center;
   margin: 100px 0 100px 0;
-  @media (max-width: 768px) {
-    .mt {
-      margin-top: 1.5rem !important;
-    }
-  }
+  // @media (max-width: 768px) {
+  //   .mt {
+  //     margin-top: 1.5rem !important;
+  //   }
+  // }
 
   .row {
     margin: 80px 0 80px 0 !important;
@@ -105,23 +105,25 @@ export default {};
     border-radius: 10px;
     text-align: center;
     padding: 20px;
+    //   &:hover {
+    //   animation: animate 0.5s ease;
+
+    // }
+    //  @media (max-width: 768px) {
+    //   &:hover {
+    //     animation: none !important;
+    //   }
+    // }
   }
-  .card:hover {
-    animation: animate 0.5s ease;
-  }
-  @media (max-width: 768px) {
-    .card:hover {
-      animation: none !important;
-    }
-  }
-  @keyframes animate {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-15px);
-    }
-  }
+
+  // @keyframes animate {
+  //   from {
+  //     transform: translateY(0);
+  //   }
+  //   to {
+  //     transform: translateY(-15px);
+  //   }
+  // }
   span {
     font-size: 40px;
     color: white;
@@ -130,12 +132,12 @@ export default {};
     color: $secondaryBlue;
     font-size: 25px;
     margin-top: 20px;
-  }
-  h3.number {
-    color: #896eff;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
+    .number {
+      color: #896eff;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0;
+    }
   }
 }
 .icon-bx1 {

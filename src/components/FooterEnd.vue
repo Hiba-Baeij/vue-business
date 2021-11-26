@@ -2,33 +2,40 @@
   <div class="footer">
     <div class="space w-100">
       <b-container>
-        <div class="d-flex justify-content-between">
-          <div class="title">
-            <h4>More With Us</h4>
-            <h2>
-              You Want To Showcase Your Website <br />
-              In Top Join With Us
-            </h2>
-          </div>
-          <div class="d-flex justify-content-center align-items-center">
+        <b-row>
+          <b-col>
+            <div class="title">
+              <h4>More With Us</h4>
+              <h2>
+                You Want To Showcase Your Website <br />
+                In Top Join With Us
+              </h2>
+            </div>
+          </b-col>
+          <b-col class="d-flex justify-content-center align-items-center p-0">
             <a href=""><span class="mdi mdi-chevron-right"></span> Join Now</a>
-          </div>
-        </div>
+          </b-col>
+        </b-row>
       </b-container>
     </div>
     <div class="footer-back">
       <b-container>
         <div class="text">
           <div class="row">
-            <div class="col-md-4">NavBar</div>
-            <div class="col-md-3 offset-md-2">
+            <b-col lg="3" md="2">NavBar</b-col>
+            <b-col offset-lg="2" offset-md="0" offset-sm="0"></b-col>
+            <b-col lg="3" md="5" class="p-0 mt-lg-0 mt-md-2">
               <span class="mdi mdi-map-marker-radius m-0"></span>
-              <span>+91 987-654-3210 <br />info@example.com</span>
-            </div>
-            <div class="col-md-3">
+
+              <span
+                >+91 987-654-3210 <br />
+                info@example.com</span
+              >
+            </b-col>
+            <b-col lg="3" md="5" class="p-0 mt-lg-0 mt-md-2">
               <span class="mdi mdi-cellphone m-0"> </span>
               <span> Marmora Road <br />Minh City, Vietnam </span>
-            </div>
+            </b-col>
             <hr />
           </div>
         </div>
@@ -39,7 +46,7 @@
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum,
               tempora! Non velit quod aspernatur, iusto molestias eos
             </p>
-            <span class="mdi mdi-facebook"></span>
+            <span class="mdi mdi-facebook m-0"></span>
             <span class="mdi mdi-instagram"></span>
             <span class="mdi mdi-twitter"></span>
           </b-col>
